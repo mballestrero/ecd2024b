@@ -1,0 +1,24 @@
+Fecha;Km recorridos;Origen;Destino;Medio;is_fixed?
+11-nov;10.7;casa;trabajo;bicicleta;base
+11-nov;4.5;trabajo;calistenia;bicicleta;base
+11-nov;14.9;calistenia;casa novia;bicicleta;base
+12-nov;14.9;casa novia;trabajo;bicicleta;base
+12-nov;3.4;trabajo;pilates;bicicleta;base
+12-nov;8.1;pilates;casa;bicicleta;base
+12-nov;6.8;casa;cena familiar;auto;base
+12-nov;9.2;cena familiar;casa;auto;base
+13-nov;10.7;casa;trabajo;bicicleta;missing
+13-nov;4.1;trabajo;calistenia;bicicleta;base
+13-nov;7.8;calistenia;hermana;bicicleta;base
+13-nov;6.1;hermana;casa novia;bicicleta;base
+13-nov;0.2;casa novia;cena familiar;pie;missing
+13-nov;0.2;cena familiar;casa novia;pie;missing
+14-nov;8.5;casa novia;trabajo;bicicleta;base
+14-nov;3.4;trabajo;pilates;bicicleta;base
+14-nov;8.5;pilates;casa;bicicleta;base
+14-nov;7.8;casa;casa novia;bicicleta;base
+15-nov;6.4;casa novia;trabajo;bicicleta;base
+15-nov;9;trabajo;casa;subte;base
+15-nov;9;casa;trabajo;subte;base
+15-nov;0.45;trabajo;itba;bicicleta;base
+15-nov;9.6;itba;casa;bicicleta;base
