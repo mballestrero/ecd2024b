@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos de Base Tp1</title>
+    <title>Datos de Viajes</title>
     <style>
         /* General */
-        body {
-            font-family: 'Arial', sans-serif;
+        html, body {
             margin: 0;
             padding: 0;
+            font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
             color: #333;
+            min-height: 100%; /* Permitir expansión vertical */
         }
 
         /* Título */
@@ -35,6 +36,7 @@
         iframe {
             width: 100%;
             border: none;
+            display: block;
         }
 
         /* Enlace de regreso */
@@ -81,8 +83,13 @@
         const iframe = document.getElementById('dynamic-iframe');
 
         iframe.onload = function () {
-            // Esperar a que el contenido se cargue y ajustar la altura
-            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+            // Ajustar la altura del iframe dinámicamente
+            const iframeDocument = iframe.contentWindow.document;
+            iframe.style.height = iframeDocument.body.scrollHeight + 'px';
+
+            // Asegurar que el body del HTML se expanda dinámicamente
+            document.body.style.height = 'auto';
+            document.documentElement.style.height = 'auto';
         };
     </script>
 </body>
