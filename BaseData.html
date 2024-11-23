@@ -69,7 +69,8 @@
     <div class="iframe-container">
         <iframe 
             id="dynamic-iframe"
-            src="https://observablehq.com/embed/4cad04044d9a947b@50?cells=tablita&api_key=cfa4dcf4352dba1ffb630d7ae295cd24f83db59b">
+            src="https://observablehq.com/embed/4cad04044d9a947b@50?cells=tablita"
+            width="100%">
         </iframe>
     </div>
 
@@ -79,18 +80,19 @@
     </div>
 
     <script>
-        // Ajustar automáticamente la altura del iframe según su contenido
-        const iframe = document.getElementById('dynamic-iframe');
+        const iframe = document.getElementById("dynamic-iframe");
 
-        iframe.onload = function () {
-            // Ajustar la altura del iframe dinámicamente
-            const iframeDocument = iframe.contentWindow.document;
-            iframe.style.height = iframeDocument.body.scrollHeight + 'px';
-
-            // Asegurar que el body del HTML se expanda dinámicamente
-            document.body.style.height = 'auto';
-            document.documentElement.style.height = 'auto';
-        };
+        // Escuchar mensajes del iframe para ajustar la altura
+        window.addEventListener("message", (event) => {
+            // Validar que el mensaje provenga de ObservableHQ
+            if (event.origin.includes("observablehq.com")) {
+                // Ajustar la altura del iframe según el contenido enviado desde el iframe
+                const { height } = event.data;
+                if (height) {
+                    iframe.style.height = `${height}px`;
+                }
+            }
+        });
     </script>
 </body>
 </html>
