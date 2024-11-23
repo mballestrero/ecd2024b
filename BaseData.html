@@ -4,7 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos de Tp1</title>
-   <iframe width="100%" height="100%" frameborder="0"
-  src="https://observablehq.com/embed/4cad04044d9a947b@50?cells=tablita&api_key=9a5064a11101c8971bcdc383bf72a7621f783947"></iframe>
+    <style>
+        /* Eliminar márgenes y padding globales */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Altura igual al dispositivo */
+            overflow: hidden; /* Evitar scroll si sobra espacio */
+        }
+
+        iframe {
+            width: 100%; /* Ocupa todo el ancho */
+            height: 100%; /* Ocupa todo el alto */
+            border: none; /* Sin bordes */
+            display: block; /* Elimina espacios blancos debajo del iframe */
+        }
+    </style>
+</head>
+<body>
+    <!-- Iframe ocupa todo el viewport -->
+    <iframe
+        src="https://observablehq.com/embed/4cad04044d9a947b@50?cells=tablita&api_key=9a5064a11101c8971bcdc383bf72a7621f783947">
+    </iframe>
 </body>
 </html>
