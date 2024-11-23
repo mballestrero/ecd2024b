@@ -4,8 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos de Viajes</title>
-   <iframe width="100%" height="350" frameborder="0"
-  src="https://observablehq.com/embed/4cad04044d9a947b@50?cells=tablita&api_key=cfa4dcf4352dba1ffb630d7ae295cd24f83db59b"></iframe>
+    <style>
+        /* General */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Título */
+        h1 {
+            text-align: center;
+            color: #0044cc;
+            margin-top: 20px;
+        }
+
+        /* Contenedor del iframe */
+        .iframe-container {
+            max-width: 90%;
+            margin: 20px auto;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+        }
+
+        /* Enlace de regreso */
+        .back-link {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: white;
+            background-color: #0044cc;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .back-link a:hover {
+            background-color: #0033a0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Datos de Viajes</h1>
+
+    <!-- Contenedor del iframe -->
+    <div class="iframe-container">
+        <iframe 
+            src="https://observablehq.com/embed/4cad04044d9a947b@50?cells=tablita&api_key=cfa4dcf4352dba1ffb630d7ae295cd24f83db59b">
+        </iframe>
+    </div>
+
+    <!-- Enlace para volver -->
     <div class="back-link">
         <a href="index.html">⬅ Volver a la página principal</a>
     </div>
