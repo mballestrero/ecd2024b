@@ -29,6 +29,15 @@
       height: auto;
     }
 
+    /* Contenedor para ObservableHQ */
+    .observableContainer {
+      position: relative;
+      width: 70%; /* 70% del ancho del navegador */
+      max-width: 100%; /* Nunca más grande que el navegador */
+      margin: 20px auto; /* Centrar horizontalmente y agregar separación con Tableau */
+      overflow: hidden; /* Evitar desbordamiento */
+    }
+
     /* Asegurar que iframe también sea responsivo */
     iframe {
       width: 100%;
@@ -38,7 +47,7 @@
 
     /* Opcional: estilos adicionales para pantallas pequeñas */
     @media (max-width: 768px) {
-      .tableauPlaceholder {
+      .tableauPlaceholder, .observableContainer {
         width: 90%; /* Más ancho en pantallas pequeñas */
       }
     }
@@ -80,7 +89,9 @@
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
   </script>
 
-  <!-- Contenedor del iframe -->
-  <iframe src="https://observablehq.com/embed/966f9c9d37e6e887@203?cells=qViajesPorDia&api_key=8f879c77132f85a2187b8f243233c3a0e14cd456" height="302"></iframe>
+  <!-- Contenedor del iframe de ObservableHQ -->
+  <div class="observableContainer">
+    <iframe src="https://observablehq.com/embed/966f9c9d37e6e887@203?cells=qViajesPorDia&api_key=8f879c77132f85a2187b8f243233c3a0e14cd456" height="302"></iframe>
+  </div>
 </body>
 </html>
