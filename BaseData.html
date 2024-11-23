@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos de Viajes</title>
+    <title>Datos de Base Tp1</title>
     <style>
         /* General */
         body {
@@ -34,7 +34,6 @@
 
         iframe {
             width: 100%;
-            height: 350px;
             border: none;
         }
 
@@ -67,6 +66,7 @@
     <!-- Contenedor del iframe -->
     <div class="iframe-container">
         <iframe 
+            id="dynamic-iframe"
             src="https://observablehq.com/embed/4cad04044d9a947b@50?cells=tablita&api_key=cfa4dcf4352dba1ffb630d7ae295cd24f83db59b">
         </iframe>
     </div>
@@ -75,5 +75,15 @@
     <div class="back-link">
         <a href="index.html">⬅ Volver a la página principal</a>
     </div>
+
+    <script>
+        // Ajustar automáticamente la altura del iframe según su contenido
+        const iframe = document.getElementById('dynamic-iframe');
+
+        iframe.onload = function () {
+            // Esperar a que el contenido se cargue y ajustar la altura
+            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        };
+    </script>
 </body>
 </html>
